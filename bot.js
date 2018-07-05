@@ -4,7 +4,7 @@ const weather = require('weather-js');
 
 bot.on('Dolty hazir!', () => {
   console.log(`Dolty Aktif! ${bot.user.tag}!`);
-  bot.user.setGame("&help | Hii!!");
+  bot.user.setGame("&hel");
 });
 
 
@@ -22,13 +22,6 @@ bot.on('message', message => {
     if(message.author.bot) return;
     if(!message.content.startsWith(PREFİX)) return;
 
-  if (message.content.startsWith(PREFİX + 'montaj')) {
-    message.channel.sendMessage(':ballot_box_with_check: ' + 'https://ahmethocafanclub.weebly.com/montajlar.html');
-  }
-
-  if (message.content.startsWith(PREFİX + 'gifler')) {
-    message.channel.sendMessage('https://ahmethocafanclub.weebly.com/uploads/1/1/8/3/118390772/ahmetteachergif.gif');
-  }
    
    //havadurumu-weather system.
    if (message.content.startsWith(PREFİX + 'weather?')) {
@@ -38,7 +31,7 @@ bot.on('message', message => {
            if(err) message.channel.send(err);
 
            if(result === undefined|| result.length === 0){
-                message.channel.send('*(MacCroyyBot) *Lütfen bir yer girin.*')
+                message.channel.send('*(Hata) *Lütfen bir yer girin.*')
                  return;
            }
 
